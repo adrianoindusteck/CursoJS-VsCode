@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Tabela IMC</h1>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th align="left" width="50%">
+                        IMC
+                    </th>
+                    <th align="left" width="50%">
+                        Resultado
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="50%">Menos que 18.5</td>
+                    <td width="50%">Abaixo do Peso</td>
+                </tr>
+                <tr>
+                    <td width="50%">Entre 18.5 e 24.9</td>
+                    <td width="50%">Peso Normal</td>
+                </tr>
+                <tr>
+                    <td width="50%">Entre 25 e 29.9</td>
+                    <td width="50%">Sobrepeso</td>
+                </tr>
+                <tr>
+                    <td width="50%">Entre 30 e 34.9</td>
+                    <td width="50%">Obesidade grau 1</td>
+                </tr>
+                <tr>
+                    <td width="50%">Entre 35 e 39.9</td>
+                    <td width="50%">Obesidade grau 2</td>
+                </tr>
+                <tr>
+                    <td width="50%">Mais do que 40</td>
+                    <td width="50%">Obesidade grau 3</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Calcule seu IMC</h1>
+        <form action="" class="form" method="get">
+            <label for="input-teste-1">Peso:</label>
+            <input type="text" class="peso" id="input-teste-1" name="peso">
+
+            <label for="input-teste-2">Altura:</label>
+            <input type="text" class="altura" id="input-teste-2">            
+
+            <button type="submit">Calcular</button>
+
+        </form>
+        <div class="resultado"></div>
+    </section>
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
