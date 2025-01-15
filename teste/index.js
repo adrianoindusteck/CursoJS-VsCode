@@ -1,38 +1,78 @@
-function Produto(nome, preco) {
-    this.nome = nome;
-    this.preco = preco;
+
+
+
+/*
+
+
+
+
+const novasPessoas = new Map();
+
+for(const pessoa of pessoas) {
+    const { id } = pessoa;
+    
+    novasPessoas.set(id, { ...pessoa });
     
 };
 
-Produto.prototype.desconto = function(percentual) {
-    this.preco = this.preco * (1-(percentual / 100));
-};
 
-Produto.prototype.aumento = function(percentual) {
-    this.preco = this.preco * (1 + (percentual / 100));
-};
 
-function Camiseta(nome, preco, cor) {
-    this.cor = cor;
-    Produto.call(this, nome, preco);
-}
-
-Camiseta.prototype = Object.create(Produto.prototype);
-Camiseta.prototype.constructor = Camiseta;
-
-const camiseta = new Camiseta('Regata', 7.50, 'Preta');
-const produto = new Produto('Gen', 111);
-
-console.log(camiseta);
-camiseta.aumento(100);
-console.log(camiseta);
+console.log(novasPessoas)
+console.log(novasPessoas.get(2));
 
 /*
-console.log(typeof Produto, typeof Camiseta);
-console.log(camiseta);
-console.log(produto);
-console.log(produto.aumento(10));
-console.log(Object.getPrototypeOf(camiseta));
+for (const [identifier, { id, nome}] of novasPessoas) {
+    console.log(identifier, id, nome);
+}
+   
+for (const [identifier, { id, nome}] of novasPessoas) {
+    console.log(identifier, id, nome);
+}
+    
+for (const pessoas of novasPessoas.values()) {
+    console.log(pessoas);
+}
+   
+
+console.log(novasPessoas);
+novasPessoas.delete(2);
+console.log(novasPessoas);
 */
+
+const pessoas = [
+    {id:3, nome: 'Luiz'},
+    {id:2, nome: 'Maria'},
+    {id:1, nome: 'Helena'},
+];
+
+const novasPessoas = new Map();
+
+
+for(const pessoa of pessoas) {
+    const {id} = pessoa;
+    novasPessoas.set(id, {...pessoa});
+}
+console.log(novasPessoas);
+
+for(const [identifier, {id, nome}] of novasPessoas) {
+    console.log(identifier, id, nome);
+}
+console.log('#################################')
+for (const pessoas of novasPessoas.values()) {
+    console.log(pessoas);
+}
+console.log('#################################')
+for (const pessoas of novasPessoas.keys()) {
+    console.log(pessoas);
+}
+console.log('#################################')
+for (const pessoas of novasPessoas.entries()) {
+    console.log(pessoas);
+}
+console.log('#################################')
+for (const pessoas of novasPessoas) {
+    console.log(pessoas);
+}
+
 
 
