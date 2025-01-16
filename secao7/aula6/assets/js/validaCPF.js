@@ -19,7 +19,7 @@ se o número digito for maior que 9, consideramos 0
 
 */
 
-class validaCPF {
+class ValidaCPF {
     constructor(cpfEnviado) {
         Object.defineProperty(this, 'cpfLimpo', {
             writable: false,
@@ -32,8 +32,8 @@ class validaCPF {
 
     geraNovoCpf() {
         const cpfSemDigitos = this.cpfLimpo.slice(0, -2);
-        const digito1 = validaCPF.geraDigito(cpfSemDigitos);
-        const digito2 = validaCPF.geraDigito(cpfSemDigitos + digito1);
+        const digito1 = ValidaCPF.geraDigito(cpfSemDigitos);
+        const digito2 = ValidaCPF.geraDigito(cpfSemDigitos + digito1);
         this.novoCPF = cpfSemDigitos + digito1 + digito2;
 
 
@@ -74,11 +74,11 @@ class validaCPF {
     
 }
 
-const validacpf = new validaCPF('070.987.720-03');
+//const validacpf = new ValidaCPF('070.987.720-03');
 //const validacpf = new validaCPF('000.000.000-00');
 
-if(validacpf.valida()){
-    console.log('CPF Válido!');
-} else {
-    console.log('CPF Inválido!')
-}
+//if(validacpf.valida()){
+    //console.log('CPF Válido!');
+//} else {
+    //console.log('CPF Inválido!')
+//}
